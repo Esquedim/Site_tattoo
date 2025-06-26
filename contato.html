@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contato</title>
+    <link rel="stylesheet" href="style/home.css" />
+    <link rel="stylesheet" href="style/contato.css" />
+  </head>
+
+  <body>
+    <section class="contato">
+      <h1 class="titulo">FALE COMIGO</h1>
+      <div class="linha"></div>
+      <form id="form-contato">
+        <input type="text" placeholder="Seu nome" required />
+        <input type="email" placeholder="Seu e-mail" required />
+        <input type="tel" placeholder="Seu telefone" />
+        <textarea placeholder="Escreva sua mensagem..." required></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+
+    <script>
+      document.getElementById("form-contato").addEventListener("submit", function (e) {
+        e.preventDefault();
+        alert("Mensagem enviada com sucesso!");
+        this.reset();
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,62 @@
+.sobre {
+    padding: 50px 40px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.escritas-sobre {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+}
+
+.sobre-marcos {
+    margin-left: 50px;
+    font-family: "Oswald", sans-serif;
+    font-weight: 400;
+    font-size: 60px;
+}
+
+.linha-personalizada {
+    border: none;
+    height: 3px;
+    background-color: #b6b6b6;
+    width: 350px;
+    margin: 5px 0 30px 20px;
+}
+
+.div-frases-sobre {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.sobre-frase {
+    margin-left: 50px;
+    font-family: "Raleway", sans-serif;
+    font-size: 18px;
+    line-height: 2;
+    color: #555;
+}
+
+.sobre img {
+    width: 650px;
+    height: auto;
+}
+
+.ver-portifolio-sobre {
+    margin-left: auto; /* Faz o botão ir para a direita */
+    margin-top: 30px;
+    color: black;
+    font-family: "Oswald", sans-serif;
+    font-weight: 400;
+    text-decoration: none;
+    padding: 10px 20px;
+    transition: 0.3s;
+}
+
+.ver-portifolio-sobre:hover {
+    background-color: black;
+    color: white;
+}

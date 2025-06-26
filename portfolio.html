@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Exemplo de Página</title>
+    <link rel="stylesheet" href="style/home.css">
+    <link rel="stylesheet" href="style/sobre.css">
+    <link rel="stylesheet" href="style/orcamento.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Rozha+One&display=swap" rel="stylesheet">
+    <link rel="icon" href="img/logo.png" type="logo.png">
+    <style>
+        #portfolio img {
+            margin: 10px;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: transform 0.2s;
+        }
+
+        #portfolio img:hover {
+            transform: scale(1.05);
+        }
+
+        .filter-buttons button {
+            margin: 5px;
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-family: 'Raleway', sans-serif;
+            border: none;
+            background-color: #222;
+            color: white;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .filter-buttons button:hover {
+            background-color: #555;
+        }
+
+        #modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.85);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        #modal img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="img/logo.png" alt="Logo">
+        </div>
+
+        <div class="links-cabeçalho">
+            <ul>
+                <li><a href="index.html" class="nav-link" data-section="home">HOME</a></li>
+            </ul>
+        </div>
+
+        <div class="redes-sociais">
+            <ul>
+                <li><a href="#"><img src="img/facebook.png" alt="Facebook" width="24"></a></li>
+                <li><a href="#"><img src="img/instagram.png" alt="Instagram" width="24"></a></li>
+                <li><a href="#"><img src="img/whatsapp.png" alt="WhatsApp" width="24"></a></li>
+            </ul>
+        </div>
+    </header>
+
+    <br><br>
+
+    <h1 class="titulo-portfolio">ÚLTIMOS TRABALHOS:</h1>
+
+    <div class="filter-buttons" style="text-align: center; margin-bottom: 20px;">
+        <button onclick="filterImages('all')">Todos</button>
+        <button onclick="filterImages('fineline')">Fineline</button>
+        <button onclick="filterImages('oldschool')">Oldschool</button>
+        <button onclick="filterImages('blackwork')">Blackwork</button>
+    </div>
+
+    <div style="text-align: center;" id="portfolio">
+        <img src="img/portfolio/donie.jpg" alt="donie-darko" class="blackwork" width="250" onclick="openModal(this)">
+        <img src="img/portfolio/jiraya.jpg" alt="jiraya" class="fineline" width="250" onclick="openModal(this)">
+        <img src="img/portfolio/liriosu.jpg" alt="lirio-su" class="fineline" width="250" onclick="openModal(this)">
+        <img src="img/portfolio/zoro.jpeg" alt="zoro" class="blackwork" width="250" onclick="openModal(this)">
+        <img src="img/portfolio/rostoperna.jpg" alt="rosto" class="blackwork" width="250" onclick="openModal(this)">
+        <img src="img/portfolio/caveirinha.jpg" alt="caveiras-abraco" class="blackwork" width="250" onclick="openModal(this)">
+        <img src="img/portfolio/borboletamao.jpg" alt="borboletas-mao" class="fineline" width="250" onclick="openModal(this)">
+        <img src="img/portfolio/peantonela.jpg" alt="antonela-pe" class="fineline" width="250" onclick="openModal(this)">
+        <img src="img/portfolio/balaoflor.jpeg" alt="balao-flor" class="fineline" width="250" onclick="openModal(this)">
+        <img src="img/portfolio/coracaopatinha.jpg" alt="coracao-patinha" class="fineline" width="250" onclick="openModal(this)">
+        <img src="img/portfolio/hania.jpg" alt="oni" class="oldschool" width="250" onclick="openModal(this)">
+        <img src="img/portfolio/pinupsu.jpg" alt="pinup-su" class="oldschool" width="250" onclick="openModal(this)">
+        <img src="img/portfolio/pantera.jpg" alt="pantera" class="oldschool" width="250" onclick="openModal(this)">
+        <img src="img/portfolio/medusamao.jpg" alt="medusa" class="blackwork" width="250" onclick="openModal(this)">
+        <img src="img/portfolio/tubarao.jpg" alt="tubarao" class="oldschool" width="250" onclick="openModal(this)">
+        <img src="img/portfolio/luffy.jpg" alt="luffy" class="blackwork" width="250" onclick="openModal(this)">
+    </div>
+
+    <div id="modal" onclick="closeModal()">
+        <img id="modal-img" src="">
+    </div>
+
+    <script>
+        function filterImages(style) {
+            const images = document.querySelectorAll('#portfolio img');
+            images.forEach(img => {
+                if (style === 'all' || img.classList.contains(style)) {
+                    img.style.display = 'inline-block';
+                } else {
+                    img.style.display = 'none';
+                }
+            });
+        }
+
+        function openModal(img) {
+            const modal = document.getElementById('modal');
+            const modalImg = document.getElementById('modal-img');
+            modal.style.display = 'flex';
+            modalImg.src = img.src;
+        }
+
+        function closeModal() {
+            document.getElementById('modal').style.display = 'none';
+        }
+    </script>
+</body>
+</html>

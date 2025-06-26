@@ -1,0 +1,65 @@
+.quem-confia {
+  padding: 160px 0px;
+  font-family: "Raleway", sans-serif;
+  color: #111;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.titulo {
+  font-family: "Oswald", sans-serif;
+  font-size: 48px;
+  letter-spacing: 1px;
+  font-weight: 400;
+  margin-bottom: 10px;
+  text-align: right;
+}
+
+.linha {
+  width: 80px;
+  height: 3px;
+  background-color: #b5b5b5;
+  margin-left: auto;
+  margin-bottom: 60px;
+}
+
+.comentario-bloco {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.aspas {
+  font-family: "Rozha One", serif;
+  font-size: 64px;
+  color: #555555;
+  line-height: 1;
+}
+
+.texto {
+  display: flex;
+  flex-direction: column;
+}
+
+.comentario {
+  font-size: 20px;
+  line-height: 1.6;
+  max-width: 700px;
+}
+
+.autor {
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+.nome-testemunho {
+  font-family: "Oswald", sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  color: #111;
+  font-style: normal;
+}
+
+
+
+

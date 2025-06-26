@@ -1,0 +1,55 @@
+.contato {
+  padding: 100px 40px;
+  font-family: "Raleway-Regular", Helvetica;
+  color: #111;
+  max-width: 800px;
+  margin: auto;
+}
+
+.titulo {
+  font-family: "Oswald-Regular", Helvetica;
+  font-size: 70px;
+  letter-spacing: 2px;
+  margin: 0;
+}
+
+.linha {
+  width: 500px;
+  height: 5px;
+  background-color: #b5b5b5;
+  margin: 10px 0 40px 0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+input,
+textarea {
+  font-family: "Raleway-Regular", Helvetica;
+  padding: 15px;
+  font-size: 18px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+textarea {
+  resize: vertical;
+  height: 120px;
+}
+
+button {
+  background-color: black;
+  color: white;
+  padding: 15px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #333;
+}

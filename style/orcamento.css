@@ -1,0 +1,91 @@
+.orcamento {
+    font-family: "Raleway", sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    margin: 0;
+}
+
+.div-orcamento {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.titulo-orcamento {
+    color: #222;
+    margin: 1rem;
+    font-family: "Oswald", sans-serif;
+    font-size: 20;
+    font-weight: 300 !important;
+    text-align: center;
+}
+
+.frase-orcamento {
+font-style: italic;
+margin-bottom: 2rem;
+text-align: center;
+}
+
+
+.botao-orcamento {
+background-color: #e0e0e0;
+color: #333;
+border: none;
+padding: 0.75rem 1.5rem;
+border-radius: 6px;
+cursor: pointer;
+transition: background-color 0.2s ease;
+}
+
+.botao-orcamento:hover {
+background-color: #979797;
+}
+
+
+#orcamento {
+    font-size: 20px;
+    font-weight: 500;
+    border-bottom: 2px solid #ddd;
+}
+
+.local-corpo {
+    cursor: pointer;
+    border: 1px solid #ccc;
+    background-color: #f5f5f5;
+    outline: none;
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 6px;
+    width: 250px;
+    display: block;
+    text-align: center;
+}
+
+.local-corpo:hover{
+    border: 2px solid #999;
+    border-radius: 7px;
+}
+
+.forms {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.forms .botao-orcamento {
+    margin-bottom: 1.5rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#Calcular {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+#Calcular .botao-orcamento {
+    margin-bottom: 1rem; 
+}

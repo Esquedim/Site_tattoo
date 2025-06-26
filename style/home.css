@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Rozha+One&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+body, p, h1,ul,li {
+    padding: 0;
+    margin: 0;
+}
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center !important;
+    padding: 5px 30px;
+    font-family: "Oswald", sans-serif;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    z-index: 9999;
+    background-color: white;
+    box-sizing: border-box;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+    width: 80px;
+    flex-shrink: 0;
+}
+
+.links-cabeçalho ul,
+.redes-sociais ul {
+    list-style: none;
+    display: flex;
+    gap: 50px;
+}
+
+.links-cabeçalho a,
+.redes-sociais a {
+    text-decoration: none;
+    color: black; 
+    position: relative;
+}
+
+.links-cabeçalho a:hover::after,
+.links-cabeçalho a.active::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: black;
+}
+
+.redes-sociais a img {
+    transition: transform 0.3s ease;
+}
+
+.redes-sociais a:hover img {
+    transform: scale(1.2);
+}
+
+
+/* SECTION HOME */
+.home {
+    background-image: url('../img/fundo.png');
+    background-position: center;
+    height: 92vh;
+    margin-top: 80px;
+    color: white;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding-right: 250px;
+}
+
+.escritas-home {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.nome {
+    font-family: "Rozha One", serif;
+    font-weight: 400;
+    font-size: 100px;
+    line-height: 1;
+}
+
+.home-frase {
+    font-family: "Raleway", sans-serif;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 2;
+}
+
+.ver-portifolio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 170px;
+    height: 60px;
+    border: 1px solid white;
+    color: white;
+    text-decoration: none;
+    font-family: "Oswald", sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+
+.ver-portifolio:hover {
+    background-color: white;
+    color: black;
+}

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Exemplo de Página</title>
+    <link rel="stylesheet" href="style/home.css">
+    <link rel="stylesheet" href="style/sobre.css">
+    <link rel="stylesheet" href="style/orcamento.css">
+    <link rel="stylesheet" href="style/quem-confia.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Rozha+One&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="img/logo.png" alt="Logo">
+        </div>
+
+        <div class="links-cabeçalho">
+            <ul>
+                <li><a href="#home" class="nav-link" data-section="home">HOME</a></li>
+                <li><a href="#sobre" class="nav-link" data-section="sobre">SOBRE</a></li>
+                <li><a href="#orcamento" class="nav-link" data-section="orcamento">ORÇAMENTO</a></li>
+                <li><a href="#quem-confia" class="nav-link" data-section="quem-confia">QUEM CONFIA</a></li>
+                <li><a href="contato.html" class="nav-link">CONTATO</a></li>
+            </ul>
+        </div>
+
+        <div class="redes-sociais">
+            <ul>
+                <li><a href="https://www.facebook.com"><img src="img/facebook.png" alt="Facebook" width="24"></a></li>
+                <li><a href="https://www.instagram.com"><img src="img/instagram.png" alt="Instagram" width="24"></a></li>
+                <li><a href="https://www.whatsapp.com"><img src="img/whatsapp.png" alt="WhatsApp" width="24"></a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="home" id="home">
+        <div class="escritas-home">
+            <h1 class="nome">Marcos Iung</h1>
+            <p class="home-frase">Tatuar é eternizar emoções. Cada traço é um símbolo<br>daquilo que vive em você. É marcar quem você é.</p>
+            <a href="portfolio.html" class="ver-portifolio">VER PORTFÓLIO</a>
+        </div>
+    </section>
+
+    <section class="sobre" id="sobre">
+        <div class="escritas-sobre">
+            <h1 class="sobre-marcos">SOBRE<br>MARCOS:</h1>
+            <hr class="linha-personalizada">
+            <div class="div-frases-sobre">
+                <p class="sobre-frase">Apaixonado por arte desde cedo, Marcos Iung encontrou<br>na tatuagem sua forma mais autêntica de expressão.<br>Com mais de 8 anos de experiência, especializou-se<br>em estilos como realismo, fineline e blackwork, criando<br>obras únicas que transformam a pele em tela viva.</p>
+                <p class="sobre-frase">Cada traço carrega técnica, sensibilidade e respeito pela<br>história de quem escolhe marcar o corpo com significado.<br>Atuando em Porto Alegre/RS, Marcos une talento e<br>escuta ativa para transformar ideias em arte duradoura.</p>
+            </div>
+        </div>
+        <div>
+            <img src="img/img_sobre.png" alt="Logo">
+        </div>
+    </section>
+
+    <section class="orcamento" id="orcamento">
+        <div class="div-orcamento">
+            <h2 class="titulo-orcamento sobre-marcos">Orçamento</h2>
+            <p class="frase-orcamento">
+                <Strong>Agora você pode solicitar um orçamento automático de forma simples e rápida</Strong><br>
+                Basta simular o tamanho da tatuagem e informar o local desejado no corpo. Com isso, 
+                você terá uma estimativa personalizada e poderá <br>visualizar as formas de pagamento 
+                disponíveis. Tudo pensado para facilitar sua experiência e deixar você mais próximo 
+                da sua próxima tatuagem.
+            </p>
+            <div>
+                <h3 class="titulo-orcamento">Selecione o estilo:</h3>
+                <button class="botao-orcamento" value="200" onclick="pegarInfo(this.value)">Oldschool preto e cinza</button>
+                <button class="botao-orcamento" value="100" onclick="pegarInfo(this.value)">Fineline</button>
+                <button class="botao-orcamento" value="150" onclick="pegarInfo(this.value)">Blackwork</button>
+                <button class="botao-orcamento" value="150" onclick="pegarInfo(this.value)">Colorida</button>
+            </div>
+            <div>
+                <h3 class="titulo-orcamento">Selecione o local:</h3>
+                <form id="formulario1">
+                    <label>
+                        <select class="local-corpo" id="localSelecionado" name="partes_do_corpo">
+                            <option value="300">Cabeça</option>
+                            <option value="300">Pescoço </option>
+                            <option value="120">Bicep</option>
+                            <option value="120">Tríceps</option>
+                            <option value="150">Ombro</option>
+                            <option value="120">Antebraço </option>
+                            <option value="180">Peito</option>
+                            <option value="200">Costas</option>
+                            <option value="250">Costela</option>
+                            <option value="130">Abdômen</option>
+                            <option value="120">Coxa</option>
+                            <option value="200">Lombar</option>
+                            <option value="150">Nádega</option>
+                            <option value="200">Canela</option>
+                            <option value="200">Panturilha</option>
+                        </select>
+                    </label>
+                </form>
+            </div>
+            <div>
+                <h3 class="titulo-orcamento">Selecione o Tamanho desejavel:</h3>
+                <form class="forms" id="formulario2">
+                    <label>
+                        <Select class="local-corpo" id="tamanhoSelecionado" name="tamanho">
+                            <option value="50">Até 5x5cm</option>
+                            <option value="100">Até 10x10cm</option>
+                            <option value="160">Até 15x15cm </option>
+                            <option value="230">Até 20x20cm </option>
+                            <option value="330">Até 25x25cm </option>
+                        </Select>
+                    </label><br>
+                    <button class="botao-orcamento" type="button" onclick="pegarDados(estilo)">Enviar</button>
+                </form>
+            </div>
+            <div id="Calcular">
+                <button class="botao-orcamento" type="button" onclick="mostrarValor()">Simular valor</button>
+                <h3 class="titulo-orcamento">Valor Estimado:</h3>
+                <p class="frase-orcamento" id="resultado">R$</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="quem-confia" class="quem-confia">
+        <h1 class="titulo">QUEM CONFIA</h1>
+        <div class="linha"></div>
+        <div class="comentario-bloco">
+            <div class="aspas">“</div>
+            <div class="texto">
+                <p class="comentario">
+                    Fechei com o Marcos quando joguei em Porto Alegre… moleque brabo demais!! Arte fina, detalhe surreal 🔥
+                    Valeu irmão, tu é incrível 🙌🏽
+                </p>
+                <p class="autor">
+                    <span class="nome-testemunho">Richarlison</span> | Jogador De Futebol Profissional Brasileiro
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/orcamento.js"></script>
+    <script src="js/home.js"></script>
+</body>
+</html>
